@@ -21,6 +21,8 @@ body {
 }
 
 #header {
+	width: 960px;
+	margin: auto;
 }
 
 .content {
@@ -31,32 +33,36 @@ body {
 }
 
 .video-slide {
+	border: 1px solid gainsboro;
+	padding: 0.5em;
 }
 
-.video-slide-readmore, #menu {
-	margin: 1em auto;
+#menu {
+	margin: 0 0 2em 0;
 }
 
 #menu ul {
-	text-align: center;
 	margin: 0;
 	padding: 1em 0 0 0;
 }
 
-#menu ul li {
+#menu ul li, .role-chooser ul li {
 	display: inline; /* Shows each item side-by-side */
 	list-style-type: none; /* Gets rid of the bullet points */
 }
 
-#menu ul li a.link-button {
+#menu ul li a.link-button, .role-chooser ul li a.showLink {
 	display: inline;
 }
 
 #supporters, #manifesto, #petition, #textbook-database {
 	clear: both;
-	margin-top: 4em;
-	border-top: 1px solid gainsboro;
-	margin: 4em auto;
+	margin: 2em 0 3em 0;
+	padding: 0 0 2em 0;
+}
+
+#manifesto, #petition, #textbook-database {
+	border-bottom: 1px solid gainsboro;
 }
 
 .supporter-logos {
@@ -93,18 +99,21 @@ body {
 	color: inherit;
 }
 
+.role-chooser ul {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.role-select {
+	display: inline;
+}
+
 /* -------------- TEXT ELEMENTS */
 
 h1, h2, h3, h3, h4, h5, h6 {
 	clear: both;
 	color: #666;
-	margin: 2em 0 0 0;
 	line-height: 90%;
-}
-h1 {
-	font-size: 2em;
-	text-transform: uppercase;
-	letter-spacing: 0.1em;
 }
 p {
 	max-width: 720px;
@@ -125,6 +134,7 @@ a:hover, a:active, a:focus {
 }
 
 a.link-button {
+	font-family: "Source Sans Pro", sans-serif;
 	display: block; 
 	background-color: silver; 
 	border: 1px solid gainsboro; 
@@ -140,6 +150,36 @@ a.link-button {
 
 a.link-button:hover {
 	background-color: grey;
+}
+
+a.link-button-site-name {
+	background-color: white;
+	color: #69C;
+	margin-right: 1.5em;
+}
+
+a.link-button-site-name:hover {
+	background-color: grey;
+	color: white;
+}
+
+a.link-button-light {
+	background-color: white;
+	color: grey;
+}
+
+a.link-button-light:hover {
+	background-color: gainsboro;
+	color: white;
+}
+
+/* -------------- SHOW/HIDE script */
+
+.more {
+	display: none;
+	border: 1px solid gainsboro;
+	padding: 0.5em;
+	margin: 0 0 1em 0;
 }
 
 /* -------------- IMAGES */

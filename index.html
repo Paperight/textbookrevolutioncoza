@@ -11,20 +11,25 @@
     <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,600,300italic,600italic' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
+	<!--Show/Hide script-->
+		<script language="javascript" type="text/javascript">
+		function showHide(shID) {
+		   if (document.getElementById(shID)) {
+			  if (document.getElementById(shID+'-show').style.display != 'none') {
+				 document.getElementById(shID+'-show').style.display = 'none';
+				 document.getElementById(shID).style.display = 'block';
+			  }
+			  else {
+				 document.getElementById(shID+'-show').style.display = 'inline';
+				 document.getElementById(shID).style.display = 'none';
+			  }
+		   }
+		}
+		</script>
+
 </head>
 
 <body>
-
-	<script>
-	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-	  ga('create', 'UA-25166989-6', 'textbookrevolution.co.za');
-	  ga('send', 'pageview');
-
-	</script>
 
     <div id="wrapper">
 
@@ -33,18 +38,9 @@
 
         <div class="content">
 
-			<div class="video-slide">
-
-				<center>				
-					<iframe id="ytplayer" type="text/html" width="960" height="540"
-src="https://www.youtube.com/embed/DCRcsKPiLbk?controls=0&fs=1&rel=0&showinfo=0&color=white&theme=light"
-frameborder="0" allowfullscreen></iframe>
-				</center>
-
-			</div><!--.video-slide-->
-
 			<div id="menu">
 				<ul>
+                	<li><a class="link-button link-button-site-name" href="#">#textbookrevolution</a></li>
 					<li><a class="link-button" href="#textbook-database">Textbook database</a></li>
                     <li><a class="link-button" href="#manifesto">Manifesto</a></li>
 					<li><a class="link-button" href="#petition">Petition</a></li>
@@ -52,11 +48,77 @@ frameborder="0" allowfullscreen></iframe>
 					<li><a class="link-button" href="https://www.change.org/en-GB/petitions/textbook-publishers-as-students-we-cannot-afford-traditional-textbooks-we-don-t-want-to-go-without-or-to-steal-by-photocopying-give-us-the-option-to-buy-textbooks-legally-and-cheaply-from-licensed-copy-centres" target="blank">Background</a>
 				</ul>
 			</div><!--#menu-->
+
+			<div class="video-slide">
+
+				<center>				
+					<a href="#manifesto"><img src="images/textbook-database-slide.png" alt="#textbookrevolution image" /></a>
+				</center>
+
+			</div><!--.video-slide-->
             
 			<div id="textbook-database">
 
-				<h2>Textbook database</h2>            	
-                <p>Help us create an open database of textbooks prescribed at South African universities. To contribute, mail <a href="mailto:hola@textbookrevolution.co.za">hola@textbookrevolution.co.za</a>.</p>
+				<h2>Textbook database</h2>
+                <p>We're creating an open database of books prescribed at South African universities, useful for:</p>
+                
+			<div class="role-chooser">
+				<ul>
+                	<li><a href="#" id="role-lecturer-show" class="showLink link-button link-button-light" onclick="showHide('role-lecturer');return false;">Lecturers</a></li>
+                	<li><a href="#" id="role-publisher-show" class="showLink link-button link-button-light" onclick="showHide('role-publisher');return false;">Publishers</a></li>
+                    <li><a href="#" id="role-web-retailer-show" class="showLink link-button link-button-light" onclick="showHide('role-web-retailer');return false;">Online retailers</a></li>
+                    <li><a href="#" id="role-bookseller-show" class="showLink link-button link-button-light" onclick="showHide('role-bookseller');return false;">Booksellers</a></li>
+                    <li><a href="#" id="role-startup-show" class="showLink link-button link-button-light" onclick="showHide('role-startup');return false;">Startups</a></li>
+                    <li><a href="#" id="role-uni-admin-show" class="showLink link-button link-button-light" onclick="showHide('role-uni-admin');return false;">University admins</a></li>
+                    <li><a href="#" id="role-oer-creator-show" class="showLink link-button link-button-light" onclick="showHide('role-oer-creator');return false;">OER creators</a></li>
+                </ul>
+            </div><!--.role-chooser-->
+
+            <div class="role-descriptions">
+            
+                <div id="role-lecturer" class="more">
+                <h4>Lecturers</h4>
+                <p>Ian teaches film and media at UCT. He is choosing texts for the next year. He wants to know how accessible (in price and availability) his current prescribed list is. He'd be curious to know whether there are OERs in his field. He wants to compare his textbooks to a similar course at another university, including comparing purchase rates.</p>
+                <p><a href="#" id="role-lecturer-hide" class="hideLink" onclick="showHide('role-lecturer');return false;">Close</a></p>
+                </div>
+                
+                <div id="role-publisher" class="more">
+                <h4>Publishers</h4>
+                <p>Richard is the Head of Academic Publishing at a big publishing company. He wants to decide what field to publish in and for what year. He uses the database to get a spreadsheet of courses by student numbers, purchase rates and university. For his top picks, he uses the database to find out the titles and authors of the existing textbooks in those fields.</p>
+                <p><a href="#" id="role-publisher-hide" class="hideLink" onclick="showHide('role-publisher');return false;">Close</a></p>
+                </div>
+                
+                <div id="role-web-retailer" class="more">
+                <h4>Online retailers</h4>
+                <p>Kate is the category manager for an online bookstore. She wants to know which books she must stock, how many to stock, and when they must be available for customers to buy. She uses the database to create her own spreadsheet containing title, ISBN, institutions, number of students and semester, and purchase rate. Pricing information helps her project cash flow. Product vendor URL (e.g. publisher website product page) helps her find where to order the book. She passes course codes to her developers to add to her site for customers to search by.</p>
+                <p><a href="#" id="role-web-retailer-hide" class="hideLink" onclick="showHide('role-web-retailer');return false;">Close</a></p>
+                </div>
+                
+                <div id="role-bookseller" class="more">
+                <h4>Booksellers</h4>
+                <p>Pierre manages a brick-and-mortar bookstore. He is curious to know whether it's worth stocking university textbooks in his store. He uses the database to find out which books are most popular at local universities, purchase rates, and how accessible they are already to local students.</p>
+                <p><a href="#" id="role-bookseller-hide" class="hideLink" onclick="showHide('role-bookseller');return false;">Close</a></p>
+                </div>
+                
+                <div id="role-startup" class="more">
+                <h4>Startups</h4>
+                <p>Tamryn's startup provides online training. Universities are her competitors. She needs to know which courses are most popular and lucrative. She uses the database to create a list of top courses by student numbers and book pricing. Knowing what students expect to pay helps her set prices and promote her services. She also wants to know about available OERs that she can adapt into her own course material.</p>
+                <p><a href="#" id="role-startup-hide" class="hideLink" onclick="showHide('role-startup');return false;">Close</a></p>
+                </div>
+                
+                <div id="role-uni-admin" class="more">
+                <h4>University administrators</h4>
+                <p>Salah is a senior admin at a large university. He wants to compare textbook pricing and purchase rates at his university vs others. He wants to see the demographics of the authors, the accessibility index, and red flags for self-interested prescription (authors prescribing their own book), obvious OER candidates, and out-of-date books.</p>
+                <p><a href="#" id="role-uni-admin-hide" class="hideLink" onclick="showHide('role-uni-admin');return false;">Close</a></p>
+                </div>
+                
+                <div id="role-oer-creator" class="more">
+                <h4>OER creators</h4>
+                <p>Mark is a physicist with a grant to create an OER textbook. First, he uses the database to find out which textbooks are already used, so that his textbook can cover the same ground; and what OERs exist that he could use. Once he's written it, he contributes his book's details to the database.</p>
+                <p><a href="#" id="role-oer-creator-hide" class="hideLink" onclick="showHide('role-oer-creator');return false;">Close</a></p>
+                </div>
+
+            </div><!--.role-descriptions-->
                 
                 <img class="screenshot" alt="Database screenshot" src="images/database_940px.png" />
 
@@ -64,30 +126,29 @@ frameborder="0" allowfullscreen></iframe>
 						<p><a class="link-button" target="_blank" href="https://docs.google.com/a/paperight.com/spreadsheet/pub?key=0Ak78QVAP_CkEdDJVcGNlMkN3cGJVMlZUQVI4NlVfWkE&output=html">See the database</a></p>
 				</div><!--.go-to-database-->
 
-                <p>The #textbookrevolution database is published under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share-Alike 4.0 License</a>. For a copy of the database or to purchase a license exception for proprietary use, <a href="http://creativecommons.org/licenses/by-sa/4.0/">contact us</a>.</p>
+                <p>The #textbookrevolution database is published under a <a href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution Share-Alike 4.0 License</a>.  To contribute, mail <a href="mailto:hola@textbookrevolution.co.za">hola@textbookrevolution.co.za</a>. For a copy of the database or to purchase a license exception for proprietary use, <a href="http://creativecommons.org/licenses/by-sa/4.0/">contact us</a>.</p>
                 
             </div><!--#textbook-database-->
 				
 			<div id="manifesto">
 
 				<h2>Manifesto</h2>
-				<p>At South African universities, less than half of students buy textbooks.</p>
-				<p>They are too often expensive, out of stock, hard to find, and longer than necessary.</p>
-				<p>This must change.</p>
-				<p>The culprit? The supply chain:</p>
-				<p>Printing + Shipping + Warehousing + Wastage + Retail = 70% of the price.</p>
-				<p>That’s crazy.</p>
-				<p>There is a better way.</p>
-				<p>Textbooks can be printed on demand in any copy shop quickly and legally.</p>
-				<p>Legal copy-shop printouts cut textbook prices by up to 40%.</p>
-				<p>And publishers and authors still get paid the same.</p>
-				<p>This could save R1000 for every student in South Africa.</p>
-				<p>That’s a billion rand every year to spend on more important things, like food and housing.</p>
-				<p>It’s time for a <a href="http://twitter.com/search?q=textbookrevolution">#textbookrevolution</a>.</p>
-				<p>Lecturers and authors: Insist that publishers put textbooks on <a href="http://www.paperight.com">Paperight</a>.</p>
-				<p>Universities: scrap monopolies for campus bookstores.</p>
-				<p>Students: spread the word.</p>
-				<p><a href="http://twitter.com/search?q=textbookrevolution">#textbookrevolution</a></p>
+                
+                <div class="video-slide">
+    
+                    <center>				
+                        <iframe id="ytplayer" type="text/html" width="940" height="540"
+						    src="https://www.youtube.com/embed/DCRcsKPiLbk?controls=0&fs=1&rel=0&showinfo=0&color=white&theme=light"
+						    frameborder="0" allowfullscreen></iframe>
+                    </center>
+    
+                </div><!--.video-slide-->
+                
+				<p>At South African universities, less than half of students buy textbooks. They are too often expensive, out of stock, hard to find, and longer than necessary. This must change.</p>
+				<p>The culprit? The supply chain: printing + shipping + warehousing + wastage + retail = 70% of the price. That’s crazy. There is a better way.</p>
+				<p>Textbooks can be printed on demand in any copy shop quickly and legally. Legal copy-shop printouts cut textbook prices by up to 40%, and publishers and authors still get paid the same.</p>
+				<p>This could save R1000 for every student in South Africa. That’s a billion rand every year to spend on more important things, like food and housing. It’s time for a <a href="http://twitter.com/search?q=textbookrevolution">#textbookrevolution</a>.</p>
+				<p>Lecturers and authors: Insist that publishers put textbooks on <a href="http://www.paperight.com">Paperight</a>. Universities: scrap monopolies for campus bookstores. Students: spread the word: <a href="http://twitter.com/search?q=textbookrevolution">#textbookrevolution</a>.</p>
 				
 			</div><!--#manifesto-->
 			
