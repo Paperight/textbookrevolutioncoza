@@ -5,7 +5,7 @@
 /* -------------- BODY */
 
 body {
-	font-family: "Montserrat", sans-serif;
+	font-family: "Source Sans Pro", sans-serif;
 	font-size: 1.2em;
 	margin: 0;
 	padding: 0;
@@ -125,7 +125,6 @@ a:hover, a:active, a:focus {
 }
 
 a.link-button {
-	font-family: "Source Sans Pro", sans-serif;
 	display: block; 
 	background-color: silver; 
 	border: 1px solid gainsboro; 
