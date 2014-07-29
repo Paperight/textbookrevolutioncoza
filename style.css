@@ -55,14 +55,27 @@ body {
 	display: inline;
 }
 
-#supporters, #manifesto, #petition, #textbook-database {
+#textbook-database, #supporters, #contact {
 	clear: both;
 	margin: 2em 0 3em 0;
 	padding: 0 0 2em 0;
 }
 
-#manifesto, #petition, #textbook-database {
+#textbook-database {
 	border-bottom: 1px solid gainsboro;
+}
+
+.role-chooser {
+	padding: 0.5em 0;
+}
+
+.role-chooser ul {
+	margin: 0 0 1em 0;
+	padding: 0;
+}
+
+.role-select {
+	display: inline;
 }
 
 .supporter-logos {
@@ -84,28 +97,13 @@ body {
 	border-radius: 0.25em; 
 }
 
-#footer {
+.clear-floats {
 	clear: both;
-	padding: 1em;
-	background: #FFF;
-	width: 960px;
-	min-height: 2em;
-}
-#footer p {
-	color: silver;
-	font-size: 0.7em;
-}
-#footer a {
-	color: inherit;
 }
 
-.role-chooser ul {
-	margin: 0 0 1em 0;
-	padding: 0;
-}
-
-.role-select {
-	display: inline;
+#contact {
+	border-top: 1px solid gainsboro;
+	padding: 2em 0 0 0;
 }
 
 /* -------------- TEXT ELEMENTS */
